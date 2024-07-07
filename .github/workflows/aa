@@ -33,7 +33,7 @@ toggleButton.TextColor3 = Color3.fromRGB(255,255,255)
 toggleButton.Text = "閉じる"
 
 increaseButton.MouseButton1Click:Connect(function()
-    workspace.Gravity = workspace.Gravity + 100
+    workspace.Gravity = workspace.Gravity + 10000
     gravityLabel.Text = "重力: " .. tostring(workspace.Gravity)
 end)
 
