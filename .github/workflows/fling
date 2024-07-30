@@ -1,16 +1,24 @@
 
-FlingPower = 999999999999
+-- 変数の設定
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
 
-geme:GetService('RunService') .Stepped:Connect(funotion()
-geme.Prayers.localPrayer.Character.Head.CanCollide = false
-geme.Prayers.localPrayer.Character.UpperTorso.CanCollide = false
-geme.Prayers.localPrayer.Character.LowerTorso.CanCollide = false
-geme.Prayers.localPrayer.Character.HumanoidRootPart.CanCollide = false
-end)
-wait(1)
-local FlingC = Instance.new("BodyThrust")
-FlingC.Parent = geme.Prayers.LocalPrayer.Character.HumanoidRootPart
-FlingC.Force = Vecotor3.new (FlingPower,0,FlingPower)
-FlingC.Location = geme.Prayers.LocalPrayer.Character.HumanoidRootPart.Position
-Print(FlingPower + " Power has been Executed.")
-print(geme.Prayers.Neme)
+-- フリングの実行
+local function fling()
+    -- フリングの力を設定
+    local forceMagnitude = 900000000000
+    local bodyVelocity = Instance.new("BodyVelocity")
+    
+    bodyVelocity.Velocity = humanoidRootPart.CFrame.LookVector * forceMagnitude
+    bodyVelocity.MaxForce = Vector3.new(9000000000000, 0, 9000000000000) -- 力の大きさを設定
+    
+    bodyVelocity.Parent = humanoidRootPart
+    
+    -- 一定時間後にBodyVelocityを削除
+    wait(0.1)
+    bodyVelocity:Destroy()
+end
+
+-- スクリプト起動時に自動的にフリング
+fling()
