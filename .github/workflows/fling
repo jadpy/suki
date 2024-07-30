@@ -3,11 +3,11 @@ local character = player.Character or player.CharacterAdded:Wait()
 local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
 
 local function fling()
-    local forceMagnitude = 900000000000
+    local forceMagnitude = 50000000
     local bodyVelocity = Instance.new("BodyVelocity")
     
     bodyVelocity.Velocity = humanoidRootPart.CFrame.LookVector * forceMagnitude
-    bodyVelocity.MaxForce = Vector3.new(9000000000000, 0, 9009000000000) -- 力の大きさを設定
+    bodyVelocity.MaxForce = Vector3.new(500000000, 0, 0) -- 力の大きさを設定
     
     bodyVelocity.Parent = humanoidRootPart
     
