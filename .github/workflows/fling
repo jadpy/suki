@@ -1,24 +1,18 @@
-
--- 変数の設定
 local player = game.Players.LocalPlayer
 local character = player.Character or player.CharacterAdded:Wait()
 local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
 
--- フリングの実行
 local function fling()
-    -- フリングの力を設定
     local forceMagnitude = 900000000000
     local bodyVelocity = Instance.new("BodyVelocity")
     
     bodyVelocity.Velocity = humanoidRootPart.CFrame.LookVector * forceMagnitude
-    bodyVelocity.MaxForce = Vector3.new(9000000000000, 0, 9000000000000) -- 力の大きさを設定
+    bodyVelocity.MaxForce = Vector3.new(9000000000000, 900000000000, 9009000000000) -- 力の大きさを設定
     
     bodyVelocity.Parent = humanoidRootPart
-    
-    -- 一定時間後にBodyVelocityを削除
+
     wait(0.1)
     bodyVelocity:Destroy()
 end
 
--- スクリプト起動時に自動的にフリング
 fling()
