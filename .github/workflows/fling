@@ -7,10 +7,10 @@ local function fling()
     local bodyVelocity = Instance.new("BodyVelocity")
     
     bodyVelocity.Velocity = humanoidRootPart.CFrame.LookVector * forceMagnitude
-    bodyVelocity.MaxForce = Vector3.new(9000000000000, 900000000000, 9009000000000) -- 力の大きさを設定
+    bodyVelocity.MaxForce = Vector3.new(9000000000000, 0, 9009000000000) -- 力の大きさを設定
     
     bodyVelocity.Parent = humanoidRootPart
-
+    
     wait(0.1)
     bodyVelocity:Destroy()
 end
