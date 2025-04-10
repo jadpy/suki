@@ -8,6 +8,7 @@ local whitelist = {
     "scriptxseller_c",
     "ss125519",
     "mine0118",
+    "INUKUN115",
 
 }
 function isPlayerWhitelisted(player)
