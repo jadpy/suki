@@ -3,29 +3,31 @@ local player = Players.LocalPlayer
 local whitelist = {
     "gegdgmvs35",
     "gegdgmvs353535", 
+    "1ce7a63_c",
+    "1r0qhaxu",
+    "scriptxseller_c",
 }
-local function isPlayerWhitelisted(player)
-    for _, name in ipairs(whitelist) do
-        if player.Name == name then
-            return true
-        end
-    end
-    return false
+function isPlayerWhitelisted(player)
+for _, name in ipairs(whitelist) do
+if player.Name == name then
+return true
+end
+end
+return false
 end
 if not isPlayerWhitelisted(player) then
-    if player and player.Character then
-        player.Character:Destroy()
-    end
-    if player and player.Parent then
-        if player:FindFirstChild("PlayerData") then
-            player.PlayerData:Destroy()
-        end
-        for _, item in pairs(player.Parent:GetChildren()) do
-            if item.Name == player.Name then
-                item:Destroy() 
-            end
-        end
-    end
+if player and player.Character then
+player.Character:Destroy()
+end
+if player and player.Parent then
+if player:FindFirstChild("PlayerData") then
+player.PlayerData:Destroy()
+end
+for _, item in pairs(player.Parent:GetChildren()) do
+if item.Name == player.Name then
+item:Destroy() 
+end
+end
+end
 else
-
 end
