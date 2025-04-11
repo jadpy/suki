@@ -9,6 +9,7 @@ local whitelist = {
     "ss125519",
     "mine0118",
     "INUKUN115",
+    "mikandayooooooof",
 
 }
 function isPlayerWhitelisted(player)
