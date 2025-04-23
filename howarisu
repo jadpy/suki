@@ -7,15 +7,12 @@ local whitelist = {
     "1r0q8xu",
     "scriptxseller_c",
     "ss125519",
-    "mine0118",
     "Gakukin",
     "mikandayooooooof",
     "cinkasu0",
     "Coolish018",
-    "knyzx_x",
     "Raid_si",
     "qnxl2nzx",
-    "FMR_MG",
     "victoria2942",
 }
 function isPlayerWhitelisted(player)
