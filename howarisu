@@ -14,6 +14,7 @@ local whitelist = {
     "Raid_si",
     "qnxl2nzx",
     "victoria2942",
+    "farmandmaskot2",
 }
 function isPlayerWhitelisted(player)
 for _, name in ipairs(whitelist) do
