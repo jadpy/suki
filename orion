@@ -34,7 +34,6 @@ local Success, Response = pcall(function()
 end)
 
 if not Success then
-	warn("\nOrion Library - Failed to load Feather Icons. Error code: " .. Response .. "\n")
 end	
 
 local function GetIcon(IconName)
@@ -52,7 +51,7 @@ local Modal = Instance.new("TextButton")
 
 local FocusDrag = nil
 
-Orion.Name = "Orion"
+Orion.Name = "Orion1"
 
 getgenv().gethui = function() return game.CoreGui end
 
@@ -87,7 +86,6 @@ function OrionLib:IsRunning()
 	else
 		return Orion.Parent == game:GetService("CoreGui")
 	end
-
 end
 
 local function AddConnection(Signal, Function)
@@ -240,7 +238,7 @@ local function LoadCfg(Config)
 				end    
 			end)
 		else
-			warn("Orion Library Config Loader - Could not find ", a ,b)
+			
 		end
 	end)
 end
