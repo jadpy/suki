@@ -1,5 +1,5 @@
-a = math.random(10,255)
-for i = 0,a do
+for i = 0,20000000 do
 game.ReplicatedStorage.GrabEvents.CreateGrabLine:FireServer(game.Players.LocalPlayer.Character.Head,CFrame.new(0,0,0))
 end
+
 
