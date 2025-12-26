@@ -1,1 +1,1 @@
-game.Players.LocalPlayer:Destroy()
+game.ReplicatedStorage.GrabEvents.CreateGrabLine:FireServer(game.Players.LocalPlayer.Character.Head,CFrame(0,0,0))
