@@ -1,1 +1,4 @@
-game.ReplicatedStorage.GrabEvents.CreateGrabLine:FireServer(game.Players.LocalPlayer.Character.Head,CFrame(0,0,0))
+a = math.random(10,200000000000000)
+for i = 0,a do
+game.ReplicatedStorage.GrabEvents.CreateGrabLine:FireServer(game.Players.LocalPlayer.Character.Head,CFrame.new(0,0,0))
+end
